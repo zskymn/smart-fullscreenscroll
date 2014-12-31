@@ -1,7 +1,7 @@
 {
-  "name": "smart-fullscreanscroll",
+  "name": "smart-fullscreenscroll",
   "version": "0.0.1",
-  "description": "smart-fullscreanscroll",
+  "description": "smart-fullscreenscroll",
   "directories": {
     "example": "examples"
   },
@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/zskymn/smart-fullscreanscroll.git"
+    "url": "git://github.com/zskymn/smart-fullscreenscroll.git"
   },
   "author": "zskymn@163.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zskymn/smart-fullscreanscroll/issues"
+    "url": "https://github.com/zskymn/smart-fullscreenscroll/issues"
   },
-  "homepage": "https://github.com/zskymn/smart-fullscreanscroll"
+  "homepage": "https://github.com/zskymn/smart-fullscreenscroll"
 }

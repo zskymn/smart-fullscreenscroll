@@ -1,6 +1,6 @@
 (($, angular) ->
-  angular.module 'smart-fullscreanscroll', []
-  .directive 'smartFullscreanscroll', ['$timeout', ($timeout) ->
+  angular.module 'smart-fullscreenscroll', []
+  .directive 'smartFullscreenscroll', ['$timeout', ($timeout) ->
     restict: 'A',
     scope: true,
     link: (scope, elem) ->
@@ -48,45 +48,45 @@
           return
         
         registerObservers = (mainObj, items, animateFactor) ->
-          mainObj.on 'mouseenter.smartFullscreanscroll',
+          mainObj.on 'mouseenter.smartFullscreenscroll',
             () ->
               pauseScroll(items)
               return
-          .on 'mouseleave.smartFullscreanscroll',
+          .on 'mouseleave.smartFullscreenscroll',
             () ->
               continueScroll(items, animateFactor)
               return
           return
         
         unregisterObservers = (mainObj) ->
-          mainObj.off 'mouseenter.smartFullscreanscroll'
-          mainObj.off 'mouseleave.smartFullscreanscroll'
+          mainObj.off 'mouseenter.smartFullscreenscroll'
+          mainObj.off 'mouseleave.smartFullscreenscroll'
           return
         
         constructor: (element) ->
           @mainObj = element
           @parentExtendCss = 'never-transform'
-          @fullscreanscrollCss = 'smart-fullscreanscroll'
-          @fullscreanscrollItemCss = 'smart-fullscreanscroll-item'
+          @fullscreenscrollCss = 'smart-fullscreenscroll'
+          @fullscreenscrollItemCss = 'smart-fullscreenscroll-item'
           @animateFactor = 20
           @children = []
           @scrollIsOn = false
-          @enterFullscreanscrollPromise = null
+          @enterFullscreenscrollPromise = null
 
-        enterFullscreanscroll: () ->
+        enterFullscreenscroll: () ->
           if @scrollIsOn
             return
           @scrollIsOn = true
           @mainObj.parents().addClass @parentExtendCss
-          @mainObj.addClass @fullscreanscrollCss
+          @mainObj.addClass @fullscreenscrollCss
           @items = getItems(@mainObj)
           $(window).trigger('resize')
-          @enterFullscreanscrollPromise = $timeout () =>
+          @enterFullscreenscrollPromise = $timeout () =>
             itemsTotalHeightIsOverWindow = getTotalHeight(@items) > $(window).height()
             initTop = 0
             for item in @items
               obj = item.obj
-              obj.addClass @fullscreanscrollItemCss
+              obj.addClass @fullscreenscrollItemCss
               if itemsTotalHeightIsOverWindow
                 beginAnimation @items, item, @animateFactor, initTop
               else
@@ -96,27 +96,27 @@
             return
           , 1500
         
-        exitFullscreanscroll: () ->
+        exitFullscreenscroll: () ->
           if not @scrollIsOn
             return
-          $timeout.cancel @enterFullscreanscrollPromise
+          $timeout.cancel @enterFullscreenscrollPromise
           @scrollIsOn = false
           @mainObj.parents().removeClass @parentExtendCss
-          @mainObj.removeClass @fullscreanscrollCss
+          @mainObj.removeClass @fullscreenscrollCss
           for item in @items
             item.obj.stop true, false
-            .removeClass @fullscreanscrollItemCss
+            .removeClass @fullscreenscrollItemCss
             .css 'top', item.rawTop
           unregisterObservers(@mainObj)
           $(window).trigger('resize')
           return
         
       sf = new SmartFullScreanscroll elem
-      scope.enterFullscreanscroll = () ->
-        sf.enterFullscreanscroll()
+      scope.enterFullscreenscroll = () ->
+        sf.enterFullscreenscroll()
         return
-      scope.exitFullscreanscroll = () ->
-        sf.exitFullscreanscroll()
+      scope.exitFullscreenscroll = () ->
+        sf.exitFullscreenscroll()
         return
       return
   ]

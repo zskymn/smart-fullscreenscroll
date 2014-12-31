@@ -1,10 +1,10 @@
-angular.module 'app', ['smart-fullscreanscroll']
+angular.module 'app', ['smart-fullscreenscroll']
   .controller 'AppCtrl', ['$scope', '$timeout', ($scope, $timeout) ->
     $timeout () ->
-      $scope.enterFullscreanscroll()
+      $scope.enterFullscreenscroll()
     , 50
     
     # $timeout () ->
-    #   $scope.existFullscreanscroll()
+    #   $scope.existFullscreenscroll()
     # , 40000
   ]

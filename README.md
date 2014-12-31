@@ -1,2 +1,2 @@
-smart-fullscreanscroll
+smart-fullscreenscroll
 ======================
