@@ -1,0 +1,44 @@
+.wrap {
+  transform: translate(0, 0);
+  background-color: white;
+  top: 100px;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.main {
+  background-color: gray;
+  [class^=item-] {
+    font-size: 200px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+  .item-1 {
+    height: 200px;
+    line-height: 200px;
+    background-color: red;
+  }
+  .item-2 {
+    height: 340px;
+    line-height: 340px;
+    background-color: blue;
+  }
+  .item-3 {
+    height: 300px;
+    line-height: 300px;
+    background-color: yellow;
+  }
+  .item-4 {
+    height: 210px;
+    line-height: 210px;
+    background-color: green;
+  }
+  .item-5 {
+    height: 270px;
+    line-height: 270px;
+    background-color: black;
+  }
+}
