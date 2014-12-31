@@ -69,7 +69,7 @@
           @fullscreenscrollCss = 'smart-fullscreenscroll'
           @fullscreenscrollItemCss = 'smart-fullscreenscroll-item'
           @animateFactor = 20
-          @children = []
+          @items = []
           @scrollIsOn = false
           @enterFullscreenscrollPromise = null
 
