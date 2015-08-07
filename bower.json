@@ -1,0 +1,25 @@
+{
+  "name": "smart-fullscreenscroll",
+  "version": "1.0.0",
+  "homepage": "https://github.com/zskymn/smart-fullscreenscroll",
+  "authors": [
+    "zskymn <zskymn@163.com>"
+  ],
+  "description": "一个实现全屏滚动得AngularJS指令",
+  "main": [
+    "dist/smart-fullscreenscroll.js",
+    "dist/smart-fullscreenscroll.css"
+  ],
+  "keywords": [
+    "fullscreen",
+    "scroll",
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
