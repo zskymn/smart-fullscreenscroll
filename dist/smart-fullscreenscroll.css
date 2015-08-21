@@ -1,5 +1,8 @@
 .never-transform {
-  transform: none !important;
+  -webkit-transform: none !important;
+      -ms-transform: none !important;
+       -o-transform: none !important;
+          transform: none !important;
 }
 
 .smart-fullscreenscroll {
@@ -8,7 +11,7 @@
   left: 0;
   right: 1px;
   bottom: 0;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 .smart-fullscreenscroll .smart-fullscreenscroll-item {
   position: absolute;
